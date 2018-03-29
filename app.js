@@ -77,6 +77,16 @@ userData.points++;
 let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
 if (curLevel > userData.level) {
   // Level up!
+
+  {
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "performance-m"
+    }
+  }
+}
+  
   userData.level = curLevel;
   var up = new Discord.RichEmbed();
   up.setTitle(`Level up ${message.author.username}`)
