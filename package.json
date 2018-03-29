@@ -1,25 +1,13 @@
 {
   "name": "XenonBot",
-  "version": "1.2.5",
   "description": "Xenon bot si atat",
+  "version": "1.2.5",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "author": "HexHunter",
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "discord-eco": "0.0.10",
-    "discord.js": "^11.3.2",
-    "fs": "0.0.1-security",
-    "got": "^8.3.0",
-    "moment": "^2.20.1",
-    "ms": "^0.7.3",
-    "parse-ms": "^1.0.1",
-    "profanities": "^2.6.0",
-    "quick.log": "^1.2.1",
-    "snekfetch": "^3.6.4",
-    "weather-js": "^2.0.0"
+  "dependencies: {
+  "discord.js": "^11.3.2",
+  "request": "2.81.0"
   }
 }
