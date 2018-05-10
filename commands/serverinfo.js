@@ -11,21 +11,20 @@ exports.run = (client, message, args) => {
       if(member.user.bot) b = b + 1;
   });
     const embed = new Discord.RichEmbed()
-       .addField('>> Server name <<', message.guild.name, true)
+       .addField('>> Nume <<', message.guild.name, true)
        .addField('>> ID <<', message.guild.id, true)
-       .addField('>> Channels <<', message.guild.channels.size, true)
-       .addField(">> Text Channels <<", message.guild.channels.filter(ch => ch.type === 'text').size, true)
-       .addField(">> Voice Channels <<", message.guild.channels.filter(ch => ch.type === "voice").size, true)
-       .addField('>> Members <<', message.guild.memberCount, true)
-       .addField(`>> Bots <<`, `${b}`, true)
-       .addField(`>> Humans <<`, `${i}`, true)
+       .addField('>> Camere <<', message.guild.channels.size, true)
+       .addField(">> Camere Text <<", message.guild.channels.filter(ch => ch.type === 'text').size, true)
+       .addField(">> Camere Voice <<", message.guild.channels.filter(ch => ch.type === "voice").size, true)
+       .addField('>> Membrii <<', message.guild.memberCount, true)
+       .addField(`>> Boti <<`, `${b}`, true)
+       .addField(`>> Oameni <<`, `${i}`, true)
        .setColor(`35f4ot`)
        .setThumbnail(message.guild.iconURL)
        .setAuthor(message.guild.name, message.guild.iconURL)
        .addField('>> Owner <<', message.guild.owner.user.username, true)
-       .addField('>> Region <<', message.guild.region, true)
-       .addField('>> Roles <<', `$roles`, true)
-       .addField(">> Created At <<", message.guild.createdAt, true)
+       .addField('>> Regiune <<', message.guild.region, true)
+       .addField(">> Facut la <<", message.guild.createdAt, true)
        .setTimestamp()
 
        message.channel.send({embed});
@@ -40,6 +39,4 @@ exports.conf = {
 
 exports.help = {
   name: 'serverinfo',
-  description: 'Vezi informatii despre server',
-  usage: '$serverinfo'
 };
