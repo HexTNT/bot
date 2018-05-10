@@ -6,6 +6,8 @@ exports.run = (client, message, args) => {
 mp!forum - Primesti link de la forum
 mp!server - Primesti informatii despre serverul de minecraft
 mp!store - Vezi informatii despre store
+mp!serverinfo - informatii despre serverul de discord
+mp!ship - vezi cu cat la suta de potrivesti cu o persoana
 mp!ship - Vezi daca te potrivesti cu cineva
 mp!anunt -  Comanda de dat anunturi (rezervata pentru fondatori)
 mp!membercount - Vezi numarul persoanelor de pe server
