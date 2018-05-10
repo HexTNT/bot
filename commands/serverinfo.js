@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
        .addField('>> Membrii <<', message.guild.memberCount, true)
        .addField(`>> Boti <<`, `${b}`, true)
        .addField(`>> Oameni <<`, `${i}`, true)
-       .setColor(`35f4ot`)
+       .setColor(`ff0000`)
        .setThumbnail(message.guild.iconURL)
        .setAuthor(message.guild.name, message.guild.iconURL)
        .addField('>> Owner <<', message.guild.owner.user.username, true)
