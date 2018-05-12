@@ -62,11 +62,11 @@ client.elevation = message => {
 client.on('message', message => {
   
   if(message.content === 'salut') {
-    message.channel.send(`Salut ${message.author.username}`)
+    message.channel.send(`Salut, ce faci?`)
     }
 
     if(message.content === 'sal') {
-    message.channel.send(`Salut ${message.author.username}`)
+    message.channel.send(`Salut omule`)
     }
 
   
