@@ -225,7 +225,7 @@ culoare.setColor('ff0000')
 message.channel.send(culoare);
 }
 
-  if (message.content.toLowerCase().includes('www.youtube.com)) {
+  if (message.content.toLowerCase().includes('www.youtube.com')) {
   const culoare = new Discord.RichEmbed()
   if (!message.guild.member(client.user).hasPermission(`MANAGE_MESSAGES`)) return message.channel.send(`Nu am acces sa sterg mesaje`)
   if (message.author.bot) return;
