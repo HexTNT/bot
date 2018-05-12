@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   const mentionuser = message.mentions.users.first()
-  if (message.mentions.users.size < 1) return message.channel.send('Mentioneaza pe cineva!')
+  if (message.mentions.users.size < 1) return message.reply('Mentioneaza pe cineva!')
   const embed = new Discord.RichEmbed()
  const ship = [
  ':heart: 1% :heart:',
