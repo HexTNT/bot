@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   const mentionuser = message.mentions.users.first()
-  if (message.mentions.users.size < 1) return message.reply('Mentioneaza pe cineva!')
+  if (message.mentions.users.size < 1) return message.channel.send('Mentioneaza pe cineva!')
   const embed = new Discord.RichEmbed()
  const ship = [
  ':heart: 1% :heart:',
@@ -108,7 +108,7 @@ exports.run = (client, message, args) => {
  ':heart: 100% :heart:',
  ];
 
- embed.setColor('152ac2');
+ embed.setColor('ff0000');
  if (!user) return;
  embed.setDescription(`${message.author.username}#${message.author.discriminator}` + ship[Math.floor(Math.random()*ship.length)] + `${user.username}#${user.discriminator}`)
  message.channel.send({embed: embed});
