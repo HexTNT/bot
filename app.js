@@ -225,6 +225,18 @@ culoare.setColor('ff0000')
 message.channel.send(culoare);
 }
 
+  if (message.content.toLowerCase().includes('www.youtube.com)) {
+  const culoare = new Discord.RichEmbed()
+  if (!message.guild.member(client.user).hasPermission(`MANAGE_MESSAGES`)) return message.channel.send(`Nu am acces sa sterg mesaje`)
+  if (message.author.bot) return;
+  if (message.author.id === message.guild.owner.user.id) return;
+if (message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return;
+message.delete();
+culoare.addField('NU!', `${message.author} nu e permis asa ceva pe aici!`)
+culoare.setColor('ff0000')
+message.channel.send(culoare);
+}
+  
 if (message.content.toLowerCase().includes('https://discord.io')) {
   const culoare = new Discord.RichEmbed()
   if (!message.guild.member(client.user).hasPermission(`MANAGE_MESSAGES`)) return message.channel.send(`Nu am acces sa sterg mesaje`)
