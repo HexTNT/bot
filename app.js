@@ -60,7 +60,16 @@ client.elevation = message => {
 };
 
 client.on('message', message => {
+  
+  if(message.content === 'salut') {
+    message.channel.send(`Salut ${user.username}`)
+    }
 
+    if(message.content === 'sal') {
+    message.channel.send(`Salut ${user.username}`)
+    }
+
+  
 if (message.content === 'mp!infograd vip+') {
   const embed = new Discord.RichEmbed()
   .addField('VIP+', `Pret: 2.50EUR
