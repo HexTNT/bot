@@ -10,6 +10,8 @@ mp!serverinfo - informatii despre serverul de discord
 mp!ship - Vezi daca te potrivesti cu cineva
 mp!anunt -  Comanda de dat anunturi (rezervata pentru fondatori)
 mp!membercount - Vezi numarul persoanelor de pe server
+mp!boy - primesti grad de baiat
+mp!girl - primesti grad de fata
 ==========================================================
 mp!infograd VIP+ - Vezi la ce are acces gradul VIP+ si cat costa
 mp!infograd HERO - Vezi la ce are acces gradul HERO si cat costa
