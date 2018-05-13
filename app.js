@@ -61,25 +61,22 @@ client.elevation = message => {
 
 client.on('message', message => {
   
-  //if(message.content === 'salut') {
-  //  message.channel.send(`Salut ${message.author.username}, ce faci?`)
-    //}
+ if (message.content === 'mp!boy') {
+    const embed = new Discord.RichEmbed() 
+    message.guild.member(message.author).addRole(message.guild.roles.find("name", "♨️ | Boys"))
+    embed.addField('Boys','Ai primit rank-ul `♨️ | Boys`')
+    embed.setColor('ff0000')
+  message.channel.send(embed)
+  }
 
-//  if (message.content === 'sal' || 'salut' || 'sall'){ 
-//message.channel.send(`Salut ${message.author.username}, ce mai faci?`); 
-//const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 }); 
-//console.log(collector) 
-//collector.on('collect', message => { 
-//if (message.content == "bine" || "stau" || "ma joc")
-// message.channel.send("Asa te vreau!"); 
-//})
-//}
-  
-    //if(message.content === 'sal') {
-   // message.channel.send(`Sal ${message.author.username}, ce faci? `)
-    //}
+  if (message.content === 'mp!girl') {
+    const embed = new Discord.RichEmbed() 
+    message.guild.member(message.author).addRole(message.guild.roles.find("name", "❤️ | Girls"))
+    embed.addField('Girls','Ai primit rank-ul `❤️ | Girls`')
+    embed.setColor('ff0000')
+  message.channel.send(embed)
+  }
 
-  
 if (message.content === 'mp!infograd vip+') {
   const embed = new Discord.RichEmbed()
   .addField('VIP+', `Pret: 2.50EUR
