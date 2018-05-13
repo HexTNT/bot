@@ -61,6 +61,36 @@ client.elevation = message => {
 
 client.on('message', message => {
   
+  if(message.content.toLowerCase() == "sall" || message.content.toLowerCase() == "sal" || message.content.toLowerCase() == "salut"){ 
+  if(message.author.bot) return;
+
+   message.channel.send(`Salut **${message.author.username}**, ce mai faci?`); 
+
+   const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 }); 
+   collector.on('collect', message => {
+    if(message.author.bot) return;
+
+    let responses = [
+      "Bine de stiut! 😄",
+      "Ce fain de tine. 😛",
+      "Super tare!! 😃",
+      "Ce bine de tine! 😄",
+      "Ce tare, si eu la fel. 😄",
+      "Woah, si eu, ce altceva poate face un bot? 😛",
+      "Eu stau pe-aici. 😃",
+      "Ce fain de tine, eu stau si ma plictisesc. 😛"
+    ];
+
+    if (message.content.toLowerCase().includes("bine") || message.content.toLowerCase().includes("bn"))
+      message.channel.send(responses[Math.floor(Math.random()*responses.length)])
+    else if (message.content.toLowerCase().includes("stau"))
+      message.channel.send(responses[Math.floor(Math.random()*responses.length)])
+    else if (message.content.toLowerCase().includes("joc"))
+      message.channel.send(responses[Math.floor(Math.random()*responses.length)])
+  })
+    return;
+  }
+  
  if (message.content === 'mp!boy') {
     const embed = new Discord.RichEmbed() 
     message.guild.member(message.author).addRole(message.guild.roles.find("name", "♨️ | Boys"))
