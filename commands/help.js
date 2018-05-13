@@ -27,7 +27,7 @@ mp!infograd MANAGER - Vezi la ce are acces gradul MANAGER si cat costa`)
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['shop', 'magazin'],
+    aliases: [],
     permLevel: 0
   };
  
