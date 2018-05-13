@@ -83,6 +83,8 @@ client.on('message', message => {
 
     if (message.content.toLowerCase().includes("bine") || message.content.toLowerCase().includes("bn"))
       message.channel.send(responses[Math.floor(Math.random()*responses.length)])
+     else if (message.content.toLowerCase().includes("muie"))
+      message.channel.send(responses[Math.floor(Math.random()*responses.length)])
     else if (message.content.toLowerCase().includes("stau"))
       message.channel.send(responses[Math.floor(Math.random()*responses.length)])
     else if (message.content.toLowerCase().includes("joc"))
