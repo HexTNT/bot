@@ -72,7 +72,7 @@ console.log(collector)
 collector.on('collect', message => { 
 if (message.content == "bine" || "stau" || "ma joc")
  message.channel.send("Asa te vreau!"); 
-} 
+})
 }
   
     //if(message.content === 'sal') {
