@@ -91,21 +91,34 @@ client.on('message', message => {
     return;
   }
   
-//  if (message.content === 'mp!boy') {
-//     const embed = new Discord.RichEmbed() 
-//     message.guild.member(message.author).addRole(message.guild.roles.find("name", "♨️ | Boys"))
-//     embed.addField('Boys','Ai primit rank-ul `♨️ | Boys`')
-//     embed.setColor('ff0000')
-//   message.channel.send(embed)
-//   }
 
-//   if (message.content === 'mp!girl') {
-//     const embed = new Discord.RichEmbed() 
-//     message.guild.member(message.author).addRole(message.guild.roles.find("name", "❤️ | Girls"))
-//     embed.addField('Girls','Ai primit rank-ul `❤️ | Girls`')
-//     embed.setColor('ff0000')
-//   message.channel.send(embed)
-//   }
+if (message.content === 'mp!boy') {
+       const embed = new Discord.RichEmbed() 
+    if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Boys").id)) {
+      message.guild.member(message.author).removeRole(message.guild.roles.find("name", "♨️ | Boys"))
+      embed.addField('Boys','Nu mai ai rank-ul `♨️ | Boys`')
+    }
+    else {
+      message.guild.member(message.author).addRole(message.guild.roles.find("name", "♨️ | Boys"))
+      embed.addField('Boys','Ai primit rank-ul `♨️ | Boys`')
+    }
+    embed.setColor('ff0000')
+    message.channel.send(embed)
+    }
+
+    if (message.content === 'mp!girl') {
+      const embed = new Discord.RichEmbed() 
+   if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "❤️ | Girls").id)) {
+     message.guild.member(message.author).removeRole(message.guild.roles.find("name", "❤️ | Girls"))
+     embed.addField('Girls','Nu mai ai rank-ul `❤️ | Girls`')
+   }
+   else {
+     message.guild.member(message.author).addRole(message.guild.roles.find("name", "❤️ | Girls"))
+     embed.addField('Girls','Ai primit rank-ul `❤️ | Girls`')
+   }
+   embed.setColor('ff0000')
+   message.channel.send(embed)
+   }
 
 if (message.content === 'mp!infograd vip+') {
   const embed = new Discord.RichEmbed()
