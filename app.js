@@ -66,14 +66,14 @@ client.on('message', message => {
     //}
 
   if (message.content === 'sal' || 'salut' || 'sall'){ 
-message.author.send(`Salut ${message.author.username}, ce mai faci?`); 
+message.channel.send(`Salut ${message.author.username}, ce mai faci?`); 
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 }); 
 console.log(collector) 
 collector.on('collect', message => { 
-if (message.content == "bine" || "stau" || "ma joc") {
+if (message.content == "bine" || "stau" || "ma joc")
  message.channel.send("Asa te vreau!"); 
 } 
-})
+}
   
     //if(message.content === 'sal') {
    // message.channel.send(`Sal ${message.author.username}, ce faci? `)
