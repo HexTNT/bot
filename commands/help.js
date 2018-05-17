@@ -7,17 +7,19 @@ mp!forum - Primesti link de la forum
 mp!server - Primesti informatii despre serverul de minecraft
 mp!store - Vezi informatii despre store
 mp!serverinfo - informatii despre serverul de discord
-mp!ship - vezi cu cat la suta de potrivesti cu o persoana
 mp!ship - Vezi daca te potrivesti cu cineva
 mp!anunt -  Comanda de dat anunturi (rezervata pentru fondatori)
 mp!membercount - Vezi numarul persoanelor de pe server
-==========================================================
-mp!infograd VIP+ - Vezi la ce are acces gradul VIP+ si cat costa
-mp!infograd HERO - Vezi la ce are acces gradul HERO si cat costa
-mp!infograd LEGEND - Vezi la ce are acces gradul LEGEND si cat costa
-mp!infograd SUPREME - Vezi la ce are acces gradul SUPREME si cat costa
-mp!infograd SPONSOR - Vezi la ce are acces gradul SPONSOR si cat costa
-mp!infograd MANAGER - Vezi la ce are acces gradul MANAGER si cat costa`)
+mp!boy - Primesti grad de baiat
+mp!girl - Primesti grad de fata
+mp!quiz - Rezolvi un quiz
+mp!ascii <text> - transformi un text in ascii text
+mp!infograd VIP+ - Vezi la ce are acces gradul VIP+
+mp!infograd HERO - Vezi la ce are acces gradul HERO
+mp!infograd LEGEND - Vezi la ce are acces gradul LEGEND
+mp!infograd SUPREME - Vezi la ce are acces gradul SUPREME
+mp!infograd SPONSOR - Vezi la ce are acces gradul SPONSOR
+mp!infograd MANAGER - Vezi la ce are acces gradul MANAGER`)
     .setColor('ff0000')
     .setFooter('Bot developer: HexHunter#3266')
     message.channel.send(embed);
@@ -26,7 +28,7 @@ mp!infograd MANAGER - Vezi la ce are acces gradul MANAGER si cat costa`)
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['shop', 'magazin'],
+    aliases: [],
     permLevel: 0
   };
  
