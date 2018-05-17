@@ -6,7 +6,9 @@ const quiz = [
   { q: "Care este cea mai jucata sectiune", a: ["skyblock"] },
   { q: "Care este ip-ul serverului", a: ["fun.multyplay.ro"] },
   { q: "De cine am fost facut?", a: ["HexHunter#3266", "HexHunter"] },
+  { q: "Unde se tin eventurile?", a: ["skyblock-easy", "skyblock normal", "skyblock-easy si normal"] },
   { q: "Care este fondatorul principal?", a: ["Vico" , "xVico_Ro"] },
+  { q: "Cand se fac eventurile", a: ["sambata" , "duminica", " sambata si duminica"] },
   { q: "Pe ce loc este comunitatea MultyPlay", a: ["3", "trei"] }
 ];
 
