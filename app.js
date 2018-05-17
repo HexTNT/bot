@@ -22,7 +22,7 @@ fs.readdir('./commands/', (err, files) => {
   log(`${files.length} comenzi incarcate.`);
   files.forEach(f => {
     const props = require(`./commands/${f}`);
-    log(`Comenzi incarcate: ${props.help.name}. 👌`);
+    log(`Comenzi incarcate: ${props.help.name}. ðŸ‘Œ`);
     client.commands.set(props.help.name, props);
    props.conf.aliases.forEach(alias => {
       client.aliases.set(alias, props.help.name);
@@ -71,14 +71,14 @@ client.on('message', message => {
     if(message.author.bot) return;
 
     let responses = [
-      "Bine de stiut! 😄",
-      "Ce fain de tine. 😛",
-      "Super tare!! 😃",
-      "Ce bine de tine! 😄",
-      "Ce tare, si eu la fel. 😄",
-      "Woah, si eu, ce altceva poate face un bot? 😛",
-      "Eu stau pe-aici. 😃",
-      "Ce fain de tine, eu stau si ma plictisesc. 😛"
+      "Bine de stiut! ðŸ˜„",
+      "Ce fain de tine. ðŸ˜›",
+      "Super tare!! ðŸ˜ƒ",
+      "Ce bine de tine! ðŸ˜„",
+      "Ce tare, si eu la fel. ðŸ˜„",
+      "Woah, si eu, ce altceva poate face un bot? ðŸ˜›",
+      "Eu stau pe-aici. ðŸ˜ƒ",
+      "Ce fain de tine, eu stau si ma plictisesc. ðŸ˜›"
     ];
 
     if (message.content.toLowerCase().includes("bine") || message.content.toLowerCase().includes("bn"))
@@ -92,49 +92,54 @@ client.on('message', message => {
   })
     return;
   }
-  
 
 if (message.content === 'mp!boy') {
-       const embed = new Discord.RichEmbed() 
-    if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Boys").id)) {
-      message.guild.member(message.author).removeRole(message.guild.roles.find("name", "♨️ | Boys"))
-      embed.addField('Boys','Nu mai ai rank-ul `♨️ | Boys`')
+  const embed = new Discord.RichEmbed() 
+  if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "â¤ï¸ | Girls").id)) {
+    embed.addField('Boys', 'Nu poti fi si fata si baiat in acelasi timp.')
+  }
+  else if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "â™¨ï¸ | Boys").id)) {
+    message.guild.member(message.author).removeRole(message.guild.roles.find("name", "â™¨ï¸ | Boys"))
+    embed.addField('Boys','Nu mai ai gradul `â™¨ï¸ | Boys`')
+  }
+  else {
+    message.guild.member(message.author).addRole(message.guild.roles.find("name", "â™¨ï¸ | Boys"))
+    embed.addField('Boys','Ai primit rank-ul `â™¨ï¸ | Boys`')
+  }
+  embed.setColor('ff0000')
+  message.channel.send(embed)
+  }
+
+  if (message.content === 'mp!girl') {
+    const embed = new Discord.RichEmbed() 
+    if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "â™¨ï¸ | Boys").id)) {
+      embed.addField('Girls', 'Nu poti fi si fata si baiat in acelasi timp.')
+    }
+    else if (message.guild.memberr(message.author).roles.has(message.guild.roles.find("name", "â¤ï¸ | Girls").id)) {
+      message.guild.member(message.author).removeRole(message.guild.roles.find("name", "â¤ï¸ | Girls"))
+      embed.addField('Girls','Nu mai ai gradul `â¤ï¸ | Girls`')
     }
     else {
-      message.guild.member(message.author).addRole(message.guild.roles.find("name", "♨️ | Boys"))
-      embed.addField('Boys','Ai primit rank-ul `♨️ | Boys`')
+      message.guild.member(message.author).addRole(message.guild.roles.find("name", "â¤ï¸ | Girls"))
+      embed.addField('Girls','Ai primit rank-ul `â¤ï¸ | Girls`')
     }
     embed.setColor('ff0000')
     message.channel.send(embed)
     }
 
-    if (message.content === 'mp!girl') {
-      const embed = new Discord.RichEmbed() 
-   if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "❤️ | Girls").id)) {
-     message.guild.member(message.author).removeRole(message.guild.roles.find("name", "❤️ | Girls"))
-     embed.addField('Girls','Nu mai ai rank-ul `❤️ | Girls`')
-   }
-   else {
-     message.guild.member(message.author).addRole(message.guild.roles.find("name", "❤️ | Girls"))
-     embed.addField('Girls','Ai primit rank-ul `❤️ | Girls`')
-   }
-   embed.setColor('ff0000')
-   message.channel.send(embed)
-   }
-
 if (message.content === 'mp!infograd vip+') {
   const embed = new Discord.RichEmbed()
   .addField('VIP+', `Pret: 2.50EUR
 Si are urmatoarele permisiuni:
-✓ Prefix tab/chat 
-✓ Acces la /Fly
-✓ Acces la /Hat
-✓ Acces la /Feed
-✓ Slot rezervat cand server-u e plin 
-✓ Acces la /ModChat
-✓ Acces la /kick 
-✓ Acces la /Mute
-✓ Acces la /Kit VIP
+âœ“ Prefix tab/chat 
+âœ“ Acces la /Fly
+âœ“ Acces la /Hat
+âœ“ Acces la /Feed
+âœ“ Slot rezervat cand server-u e plin 
+âœ“ Acces la /ModChat
+âœ“ Acces la /kick 
+âœ“ Acces la /Mute
+âœ“ Acces la /Kit VIP
 **Il poti cumpara de [aici](http://store.multyplay.ro/category/64867/)**`)
  .setColor('ff0000')
  .setFooter('Bot developer: HexHunter#3266')
@@ -146,18 +151,18 @@ if (message.content === 'mp!infograd hero') {
   const embed = new Discord.RichEmbed()
   .addField('HERO', `Pret: 10EUR
 Si are urmatoarele permisiuni:
-✓ Prefix tab/chat 
-✓ Acces la /Fly
-✓ Acces la /Hat
-✓ Acces la /Feed
-✓ Slot rezervat cand server-u e plin 
-✓ Acces la /ModChat
-✓ Acces la /kick 
-✓ Acces la /UnMute
-✓ Acces la /Kit Hero
-✓ Acces la /tp 
-✓ Acces la /Gamemode 1
-✓ Acces la /Gamemode 0
+âœ“ Prefix tab/chat 
+âœ“ Acces la /Fly
+âœ“ Acces la /Hat
+âœ“ Acces la /Feed
+âœ“ Slot rezervat cand server-u e plin 
+âœ“ Acces la /ModChat
+âœ“ Acces la /kick 
+âœ“ Acces la /UnMute
+âœ“ Acces la /Kit Hero
+âœ“ Acces la /tp 
+âœ“ Acces la /Gamemode 1
+âœ“ Acces la /Gamemode 0
 **Il poti cumpara de [aici](http://store.multyplay.ro/category/64867/)**`)
  .setColor('ff0000')
  .setFooter('Bot developer: HexHunter#3266')
@@ -168,25 +173,25 @@ if (message.content === 'mp!infograd legend') {
   const embed = new Discord.RichEmbed()
   .addField('LEGEND', `Pret: 15EUR
 Si are urmatoarele permisiuni:
-✓ Prefix tab/chat 
-✓ Acces la /Fly
-✓ Acces la /Hat
-✓ Acces la /Feed
-✓ Slot rezervat cand server-u e plin 
-✓ Acces la /ModChat
-✓ Acces la /kick 
-✓ Acces la /Mute
-✓ Acces la /UnMute
-✓ Acces la /Kit Legend
-✓ Acces la /tp 
-✓ Acces la /Gamemode 1
-✓ Acces la /Tempban
-✓ Acces la /Skull
-✓ Acces la /Time set day
-✓ Acces la /Vanish
-✓ Acces la /Weather clear
-✓ Acces la /Top
-✓ Acces la /me
+âœ“ Prefix tab/chat 
+âœ“ Acces la /Fly
+âœ“ Acces la /Hat
+âœ“ Acces la /Feed
+âœ“ Slot rezervat cand server-u e plin 
+âœ“ Acces la /ModChat
+âœ“ Acces la /kick 
+âœ“ Acces la /Mute
+âœ“ Acces la /UnMute
+âœ“ Acces la /Kit Legend
+âœ“ Acces la /tp 
+âœ“ Acces la /Gamemode 1
+âœ“ Acces la /Tempban
+âœ“ Acces la /Skull
+âœ“ Acces la /Time set day
+âœ“ Acces la /Vanish
+âœ“ Acces la /Weather clear
+âœ“ Acces la /Top
+âœ“ Acces la /me
 **Il poti cumpara de [aici](http://store.multyplay.ro/category/64867/)**`)
  .setColor('ff0000')
  .setFooter('Bot developer: HexHunter#3266')
@@ -197,28 +202,28 @@ if (message.content === 'mp!infograd supreme') {
   const embed = new Discord.RichEmbed()
   .addField('SUPREME', `Pret: 20EUR
 Si are urmatoarele permisiuni:
-✓ Prefix tab/chat 
-✓ Acces la /Fly
-✓ Acces la /Hat
-✓ Acces la /Feed
-✓ Slot rezervat cand server-u e plin 
-✓ Acces la /ModChat
-✓ Acces la /kick 
-✓ Acces la /Mute
-✓ Acces la /UnMute
-✓ Acces la /Kit Supreme
-✓ Acces la /tp 
-✓ Acces la /Gamemode 1
-✓ Acces la /Gamemode 0
-✓ Acces la /Tempban
-✓ Acces la /Skull
-✓ Acces la /Time set day
-✓ Acces la /Vanish
-✓ Acces la /Weather clear
-✓ Acces la /Top
-✓ Acces la /me
-✓ Acces la /god
-✓ Acces la /invsee
+âœ“ Prefix tab/chat 
+âœ“ Acces la /Fly
+âœ“ Acces la /Hat
+âœ“ Acces la /Feed
+âœ“ Slot rezervat cand server-u e plin 
+âœ“ Acces la /ModChat
+âœ“ Acces la /kick 
+âœ“ Acces la /Mute
+âœ“ Acces la /UnMute
+âœ“ Acces la /Kit Supreme
+âœ“ Acces la /tp 
+âœ“ Acces la /Gamemode 1
+âœ“ Acces la /Gamemode 0
+âœ“ Acces la /Tempban
+âœ“ Acces la /Skull
+âœ“ Acces la /Time set day
+âœ“ Acces la /Vanish
+âœ“ Acces la /Weather clear
+âœ“ Acces la /Top
+âœ“ Acces la /me
+âœ“ Acces la /god
+âœ“ Acces la /invsee
 **Il poti cumpara de [aici](http://store.multyplay.ro/category/64867/)**`)
  .setFooter('Bot developer: HexHunter#3266')
  .setColor('ff0000')
@@ -229,13 +234,13 @@ if (message.content === 'mp!infograd sponsor') {
   const embed = new Discord.RichEmbed()
   .addField('SPONSOR', `Pret: 37.50EUR
 Si are urmatoarele permisiuni:
-✓ Prefix tab/chat 
-✓ Acces la toate comenzile din essentials
-✓ Acces la toate comenzile de ban/unban/mute/kick
-✓ Acces la /Giveall (Event doar cu acordu unui Administrator)
-✓ Slot rezervat cand server-u e plin 
-✓ Acces la /ModChat
-✓ Acces la toate kit-urile
+âœ“ Prefix tab/chat 
+âœ“ Acces la toate comenzile din essentials
+âœ“ Acces la toate comenzile de ban/unban/mute/kick
+âœ“ Acces la /Giveall (Event doar cu acordu unui Administrator)
+âœ“ Slot rezervat cand server-u e plin 
+âœ“ Acces la /ModChat
+âœ“ Acces la toate kit-urile
 **Il poti cumpara de [aici](http://store.multyplay.ro/category/64867/)**`)
  .setColor('ff0000')
  .setFooter('Bot developer: HexHunter#3266')
@@ -246,7 +251,7 @@ if (message.content === 'mp!infograd manager') {
   const embed = new Discord.RichEmbed()
   .addField('MANAGER', `Pret: 75EUR
 Si are urmatoarele permisiuni:
-✓ Are acces la toate comenzile + op!
+âœ“ Are acces la toate comenzile + op!
 **Il poti cumpara de [aici](http://store.multyplay.ro/category/64867/)**`)
  .setColor('ff0000')
  .setFooter('Bot developer: HexHunter#3266')
