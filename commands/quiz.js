@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 const quiz = [
-  { q: "Cati ani are serverul MultyPlay", a: ["3", "invizibil"] },
+  { q: "Cati ani are serverul MultyPlay", a: ["3"] },
   { q: "Numeste un fondator al serverului", a: ["Vico", "Andreas", "Dead", "Gabitu"] },
   { q: "Care este cea mai jucata sectiune", a: ["skyblock"] },
   { q: "Care este ip-ul serverului", a: ["fun.multyplay.ro"] },
