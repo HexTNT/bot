@@ -71,14 +71,14 @@ client.on('message', message => {
     if(message.author.bot) return;
 
     let responses = [
-      "Bine de stiut! ðŸ˜„",
-      "Ce fain de tine. ðŸ˜›",
-      "Super tare!! ðŸ˜ƒ",
-      "Ce bine de tine! ðŸ˜„",
-      "Ce tare, si eu la fel. ðŸ˜„",
-      "Woah, si eu, ce altceva poate face un bot? ðŸ˜›",
-      "Eu stau pe-aici. ðŸ˜ƒ",
-      "Ce fain de tine, eu stau si ma plictisesc. ðŸ˜›"
+      "Bine de stiut! ",
+      "Ce fain de tine. ›",
+      "Super tare!! ",
+      "Ce bine de tine! ˜„",
+      "Ce tare, si eu la fel. ",
+      "Woah, si eu, ce altceva poate face un bot?",
+      "Eu stau pe-aici.",
+      "Ce fain de tine, eu stau si ma plictisesc. ›"
     ];
 
     if (message.content.toLowerCase().includes("bine") || message.content.toLowerCase().includes("bn"))
@@ -95,16 +95,16 @@ client.on('message', message => {
 
 if (message.content === 'mp!boy') {
   const embed = new Discord.RichEmbed() 
-  if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "â¤ï¸ | Girls").id)) {
-    embed.addField('Boys', 'Nu poti fi si fata si baiat in acelasi timp.')
+  if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Baieti").id)) {
+    embed.addField('Baieti', 'Nu poti fi si fata si baiat in acelasi timp.')
   }
-  else if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "â™¨ï¸ | Boys").id)) {
-    message.guild.member(message.author).removeRole(message.guild.roles.find("name", "â™¨ï¸ | Boys"))
-    embed.addField('Boys','Nu mai ai gradul `â™¨ï¸ | Boys`')
+  else if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Baieti").id)) {
+    message.guild.member(message.author).removeRole(message.guild.roles.find("name", "♨️ | Baieti"))
+    embed.addField('Baieti','Nu mai ai gradul `♨️ | Baieti`')
   }
   else {
-    message.guild.member(message.author).addRole(message.guild.roles.find("name", "â™¨ï¸ | Boys"))
-    embed.addField('Boys','Ai primit rank-ul `â™¨ï¸ | Boys`')
+    message.guild.member(message.author).addRole(message.guild.roles.find("name", "♨️ | Baieti"))
+    embed.addField('Baieti','Ai primit rank-ul `♨️ | Baieti`')
   }
   embed.setColor('ff0000')
   message.channel.send(embed)
@@ -112,16 +112,16 @@ if (message.content === 'mp!boy') {
 
   if (message.content === 'mp!girl') {
     const embed = new Discord.RichEmbed() 
-    if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "â™¨ï¸ | Boys").id)) {
-      embed.addField('Girls', 'Nu poti fi si fata si baiat in acelasi timp.')
+    if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Baieti").id)) {
+      embed.addField('Fete', 'Nu poti fi si fata si baiat in acelasi timp.')
     }
     else if (message.guild.memberr(message.author).roles.has(message.guild.roles.find("name", "â¤ï¸ | Girls").id)) {
       message.guild.member(message.author).removeRole(message.guild.roles.find("name", "â¤ï¸ | Girls"))
-      embed.addField('Girls','Nu mai ai gradul `â¤ï¸ | Girls`')
+      embed.addField('Fete','Nu mai ai gradul `❤️ | Fete`')
     }
     else {
-      message.guild.member(message.author).addRole(message.guild.roles.find("name", "â¤ï¸ | Girls"))
-      embed.addField('Girls','Ai primit rank-ul `â¤ï¸ | Girls`')
+      message.guild.member(message.author).addRole(message.guild.roles.find("name", "❤️ | Fete"))
+      embed.addField('Fete','Ai primit rank-ul `❤️ | Fete`')
     }
     embed.setColor('ff0000')
     message.channel.send(embed)
