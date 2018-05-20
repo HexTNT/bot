@@ -84,8 +84,8 @@ if (message.content === 'mp!boy') {
     if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Baieti").id)) {
       embed.addField('Fete', 'Nu poti fi si fata si baiat in acelasi timp.')
     }
-    else if (message.guild.memberr(message.author).roles.has(message.guild.roles.find("name", "â¤ï¸ | Girls").id)) {
-      message.guild.member(message.author).removeRole(message.guild.roles.find("name", "â¤ï¸ | Girls"))
+    else if (message.guild.memberr(message.author).roles.has(message.guild.roles.find("name", "❤️ | Fete").id)) {
+      message.guild.member(message.author).removeRole(message.guild.roles.find("name", "❤️ | Fete"))
       embed.addField('Fete','Nu mai ai gradul `❤️ | Fete`')
     }
     else {
