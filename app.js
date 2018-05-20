@@ -61,7 +61,17 @@ client.elevation = message => {
 
 client.on('message', message => {
   
+const msg = new Discord.RichEmbed()
+msg.addField(`Hai si tu!`, 
+`▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬
+Forum : www.multyplay.ro/forum
+▬▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬`)
+msg.setColor('ff0000')
 
+setInterval(() => {
+  client.channels.get('420290014560387073').send(msg)
+  }, 216000)
+  
 if (message.content === 'mp!boy') {
   const embed = new Discord.RichEmbed() 
   if (message.guild.member(message.author).roles.has(message.guild.roles.find("name", "♨️ | Baieti").id)) {
